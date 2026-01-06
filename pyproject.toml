@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-vite-boilerplate"
-version = "0.1.0"
+version = "0.1.1"
 description = "A Django + Vite boilerplate for rapid development"
 authors = ["Your Name <your.email@example.com>"]
 readme = "README.md"
