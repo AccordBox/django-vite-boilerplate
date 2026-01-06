@@ -2,15 +2,10 @@
 
 A Django + Vite boilerplate for rapid development.
 
-## Installation
+## Features
 
-```bash
-pip install django-vite-boilerplate
-```
-
-## Usage
-
-Coming soon!
+1. Support `Tailwind` + `Alpine.js` + `HTMX` out of the box.
+2. Support automatic full reload.
 
 ## License
 
