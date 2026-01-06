@@ -54,5 +54,5 @@ pygments_style = "sphinx"
 html_theme = "furo"
 
 html_theme_options = {
-    "announcement": "A Django + Vite boilerplate for rapid development",
+    "announcement": '🚀 Follow <a href="https://x.com/michaelyinplus" rel="nofollow" target="_blank">@michaelyinplus</a> on X for daily insights on Django and Modern Frontend development.',
 }

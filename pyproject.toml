@@ -24,9 +24,9 @@ cookiecutter = "^2.6.0"
 django-vite = "^3.0.0"
 
 [tool.poetry.urls]
-Homepage = "https://github.com/yourusername/django-vite-boilerplate"
-Documentation = "https://github.com/yourusername/django-vite-boilerplate#readme"
-Repository = "https://github.com/yourusername/django-vite-boilerplate"
+Homepage = "https://github.com/AccordBox/django-vite-boilerplate"
+Documentation = "https://django-vite-boilerplate.readthedocs.io/"
+Repository = "https://github.com/AccordBox/django-vite-boilerplate"
 
 [build-system]
 requires = ["poetry-core"]
