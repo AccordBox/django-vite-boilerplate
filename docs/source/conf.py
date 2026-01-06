@@ -29,7 +29,11 @@ release = version
 
 # -- General configuration ---------------------------------------------------
 
-extensions = ["sphinx.ext.autodoc", "autoapi.extension", "myst_parser"]
+extensions = ["sphinx.ext.autodoc", "myst_parser"]
+
+myst_enable_extensions = ["amsmath", "colon_fence", "deflist", "html_admonition", "dollarmath"]
+myst_enable_checkboxes = True
+myst_heading_anchors = 4
 
 source_suffix = {
     ".rst": "restructuredtext",
@@ -37,9 +41,7 @@ source_suffix = {
     ".md": "markdown",
 }
 
-autoapi_type = "python"
-autoapi_dirs = ["../.."]
-autoapi_ignore = ["*/tests/*.py", "*/venv/*"]
+
 autodoc_typehints = "description"
 
 templates_path = ["_templates"]
