@@ -20,34 +20,13 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
+cookiecutter = "^2.6.0"
+django-vite = "^3.0.0"
 
 [tool.poetry.urls]
 Homepage = "https://github.com/yourusername/django-vite-boilerplate"
 Documentation = "https://github.com/yourusername/django-vite-boilerplate#readme"
 Repository = "https://github.com/yourusername/django-vite-boilerplate"
-
-[tool.black]
-target-version = ['py310']
-include = '\.pyi?$'
-exclude = '''
-(
-  /(
-      \.eggs         # exclude a few common directories in the
-    | \.git          # root of the project
-    | \.hg
-    | \.mypy_cache
-    | \.pytest_cache
-    | \.tox
-    | \.venv
-    | venv
-    | fixtures
-    | static
-    | staticfiles
-    | templates
-    | migrations     # also separately exclude django migrations folder in apps
-  )/
-)
-'''
 
 [build-system]
 requires = ["poetry-core"]
