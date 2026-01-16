@@ -18,8 +18,6 @@
     {% elif cookiecutter.style_solution == 'bootstrap' %}
     "bootstrap": "^5.3.3",
     "sass-embedded": "^1.85.0",
-    {% elif cookiecutter.style_solution == 'scss' %}
-    "sass": "^1.85.0",
     {% endif %}
     "cross-env": "^7.0.3",
     "fast-glob": "^3.3.3",
