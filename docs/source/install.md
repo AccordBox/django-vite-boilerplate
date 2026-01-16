@@ -59,7 +59,19 @@ Let's run Django command to create frontend project from the templates
 
 ```bash
 $ python manage.py vite_init
-    project_slug (frontend):
+  [1/3] project_slug (frontend):
+  [2/3] Select style_solution
+    1 - tailwind
+    2 - daisy
+    3 - bootstrap
+    Choose from [1/2/3] (1): 1
+  [3/3] Select javascript_solution
+    1 - htmx_alpine
+    2 - valinajs
+    3 - hotwire
+    4 - none
+    Choose from [1/2/3/4] (1): 1
+ [SUCCESS]: Frontend app 'frontend' has been created.
 ```
 
 Now a new `frontend` directory is created which contains pre-defined files for our frontend project.
@@ -160,6 +172,7 @@ Add `index.html` to the above `example/templates`
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome - Django + Vite + Tailwind</title>
     {% vite_hmr_client %}
+    <link type="text/css" href="{% vite_asset_url 'application/app.css' %}" rel="stylesheet" />
     {% vite_asset "application/app.js" %}
 </head>
 <body class="bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen flex items-center justify-center">
@@ -191,7 +204,8 @@ Add `index.html` to the above `example/templates`
 ```
 
 1. We `load django_vite` at the top of the template
-2. `{% vite_asset "application/app.js" %}` to load js and relevant css files
+2. `{% vite_asset "application/app.js" %}` is to load js, since we have chosen `htmx_alpine` as javascript, we can directly use them without importing them in Django tempalte.
+3. `<link type="text/css" href="{% vite_asset_url 'application/app.css' %}" rel="stylesheet" />` is to load tailwind css.
 
 ## Manual Test
 
@@ -203,12 +217,6 @@ $ python manage.py runserver
 ```
 
 Now check on [http://127.0.0.1:8000/](http://127.0.0.1:8000/) and you should be able to see a welcome page.
-
-In the devtools console, you should see
-
-```bash
-👋 Hello World from django-vite-boilerplate
-```
 
 ## Preview
 
