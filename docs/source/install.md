@@ -71,7 +71,7 @@ Now a new `frontend` directory is created which contains pre-defined files for o
 ├── package-lock.json
 ├── package.json
 ├── vite_django_config.json
-├── vite.config.mts
+├── vite.config.js
 └── requirements.txt
 ```
 

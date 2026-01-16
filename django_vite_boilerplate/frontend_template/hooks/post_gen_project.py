@@ -9,7 +9,7 @@ HINT = "\x1b[3;33m"
 SUCCESS = "\x1b[1;32m [SUCCESS]: "
 
 DENY_LIST = [".gitignore"]
-ALLOW_LIST = ["package.json", "vite_django_config.json", "vite.config.mts"]
+ALLOW_LIST = ["package.json", "vite_django_config.json", "vite.config.js"]
 
 
 def print_success_msg(msg):
@@ -47,8 +47,26 @@ def copy_frontend_config_files():
             raise
 
 
+def cleanup_unnecessary_files():
+    """
+    Remove unnecessary files based on template choices.
+    """
+    frontend_path = os.getcwd()
+
+    # Remove app.scss if style_solution is 'bootstrap', otherwise remove app.css
+    if "{{ cookiecutter.style_solution }}" == "bootstrap":
+        app_css_path = os.path.join(frontend_path, "application", "app.css")
+        if os.path.exists(app_css_path):
+            os.remove(app_css_path)
+    else:
+        app_scss_path = os.path.join(frontend_path, "application", "app.scss")
+        if os.path.exists(app_scss_path):
+            os.remove(app_scss_path)
+
+
 def main():
     copy_frontend_config_files()
+    cleanup_unnecessary_files()
 
     print_success_msg(
         f"Frontend app '{{ cookiecutter.project_slug }}' "
