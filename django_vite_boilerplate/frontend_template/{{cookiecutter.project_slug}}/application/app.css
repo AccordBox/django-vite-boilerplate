@@ -1,2 +1,8 @@
+{% if cookiecutter.style_solution == 'tailwind' %}
 @import "tailwindcss";
 @source "../../**/*.{html,py,js}";
+{% elif cookiecutter.style_solution == 'daisy' %}
+@import "tailwindcss";
+@plugin "daisyui";
+@source "../../**/*.{html,py,js}";
+{% endif %}

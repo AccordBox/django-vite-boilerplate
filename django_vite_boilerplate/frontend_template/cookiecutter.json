@@ -1,3 +1,5 @@
 {
-  "project_slug": "frontend"
+  "project_slug": "frontend",
+  "style_solution": ["tailwind", "daisy", "bootstrap"],
+  "javascript_solution": ["htmx_alpine", "valinajs", "hotwire"]
 }

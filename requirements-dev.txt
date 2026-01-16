@@ -1,3 +1,5 @@
 cookiecutter
 pre-commit
 poetry
+pytest
+pytest-cov

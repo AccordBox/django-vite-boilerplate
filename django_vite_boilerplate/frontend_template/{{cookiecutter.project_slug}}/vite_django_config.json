@@ -1,6 +1,6 @@
 {
   "all": {
-    "sourceCodeDir": "frontend",
+    "sourceCodeDir": "{{ cookiecutter.project_slug }}",
     "entrypointsDir": "application",
     "additionalEntrypoints": [],
     "publicDir": "public",
