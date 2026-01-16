@@ -45,7 +45,7 @@ class TestStyleSolutions:
         context = {
             "project_slug": f"test_style_{style}",
             "style_solution": style,
-            "javascript_solution": "none",
+            "javascript_solution": "valinajs",
         }
 
         result = cookiecutter(
@@ -63,7 +63,7 @@ class TestStyleSolutions:
 class TestJavaScriptSolutions:
     """Test all javascript_solution options."""
 
-    @pytest.mark.parametrize("js_solution", ["none", "valinajs", "htmx_alpine", "hotwire"])
+    @pytest.mark.parametrize("js_solution", ["valinajs", "htmx_alpine", "hotwire"])
     def test_all_javascript_solutions(self, template_dir, output_dir, js_solution):
         """Test that all JavaScript solutions can be generated without errors."""
         context = {
@@ -88,7 +88,7 @@ class TestAllCombinations:
     """Test all combinations of style_solution and javascript_solution."""
 
     @pytest.mark.parametrize("style", ["tailwind", "daisy", "bootstrap"])
-    @pytest.mark.parametrize("js_solution", ["none", "valinajs", "htmx_alpine", "hotwire"])
+    @pytest.mark.parametrize("js_solution", ["valinajs", "htmx_alpine", "hotwire"])
     def test_all_combinations(self, template_dir, output_dir, style, js_solution):
         """
         Test all valid combinations of style and JavaScript solutions.
@@ -146,7 +146,7 @@ class TestNpmBuild:
         context = {
             "project_slug": f"test_build_style_{style}",
             "style_solution": style,
-            "javascript_solution": "none",
+            "javascript_solution": "htmx_alpine",
         }
 
         result = cookiecutter(
@@ -170,7 +170,7 @@ class TestNpmBuild:
         assert (output_dir / "public" / "static").exists(), f"Build output missing for {style}"
 
     @pytest.mark.slow
-    @pytest.mark.parametrize("js_solution", ["none", "valinajs", "htmx_alpine", "hotwire"])
+    @pytest.mark.parametrize("js_solution", ["valinajs", "htmx_alpine", "hotwire"])
     def test_npm_install_and_build_all_javascript_solutions(self, template_dir, output_dir, js_solution):
         """Test npm install and build for all JavaScript solutions."""
         context = {
@@ -202,7 +202,7 @@ class TestNpmBuild:
     @pytest.mark.integration
     @pytest.mark.slow
     @pytest.mark.parametrize("style", ["tailwind", "daisy", "bootstrap"])
-    @pytest.mark.parametrize("js_solution", ["none", "valinajs", "htmx_alpine", "hotwire"])
+    @pytest.mark.parametrize("js_solution", ["valinajs", "htmx_alpine", "hotwire"])
     def test_npm_install_and_build_all_combinations(self, template_dir, output_dir, style, js_solution):
         """
         Test npm install and build for all combinations of style and JavaScript solutions.

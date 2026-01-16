@@ -18,8 +18,4 @@ document.addEventListener('DOMContentLoaded', () => {
 {% elif cookiecutter.javascript_solution == 'hotwire' %}
 import "@hotwired/turbo-rails";
 import '@hotwired/stimulus';
-{% elif cookiecutter.javascript_solution == 'none' %}
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('👋 Hello World from django-vite-boilerplate');
-});
 {% endif %}

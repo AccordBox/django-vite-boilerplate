@@ -32,7 +32,7 @@ def context_generator():
     Returns a list of dictionaries with different template configurations.
     """
     style_solutions = ["tailwind", "daisy", "bootstrap"]
-    javascript_solutions = ["none", "valinajs", "htmx_alpine", "hotwire"]
+    javascript_solutions = ["valinajs", "htmx_alpine", "hotwire"]
 
     contexts = []
     for style in style_solutions:
@@ -52,5 +52,5 @@ def default_context():
     return {
         "project_slug": "test_frontend",
         "style_solution": "tailwind",
-        "javascript_solution": "none",
+        "javascript_solution": "htmx_alpine",
     }

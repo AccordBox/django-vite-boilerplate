@@ -69,8 +69,7 @@ $ python manage.py vite_init
     1 - htmx_alpine
     2 - valinajs
     3 - hotwire
-    4 - none
-    Choose from [1/2/3/4] (1): 1
+    Choose from [1/2/3] (1): 1
  [SUCCESS]: Frontend app 'frontend' has been created.
 ```
 
