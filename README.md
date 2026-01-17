@@ -5,7 +5,7 @@
 
 A Django + Vite boilerplate for rapid development.
 
-![Vite Django Workflow](docs/source/_static/info.png)
+![Vite Django Workflow](docs/source/_static/info.jpg)
 
 ## Features
 
